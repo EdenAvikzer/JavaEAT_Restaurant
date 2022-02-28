@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainScreen" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CustomerQueriesController">
+   <children>
+      <ImageView fitHeight="600.0" fitWidth="1084.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/food.jpg" />
+         </image>
+      </ImageView>
+      <BorderPane prefHeight="600.0" prefWidth="900.0">
+         <top>
+            <HBox prefHeight="49.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="customerName" prefHeight="27.0" prefWidth="346.0" text="Label" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
+                  <Label prefHeight="41.0" prefWidth="476.0" text="About Us" textFill="WHITE">
+                     <font>
+                        <Font name="Georgia Pro Bold Italic" size="36.0" />
+                     </font>
+                  </Label>
+                  <Button mnemonicParsing="false" onAction="#goBack" opacity="0.65" prefHeight="29.0" prefWidth="80.0" style="-fx-background-color: white; -fx-background-radius: 30;" text="Back" textFill="RED">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </HBox>
+         </top>
+         <left>
+            <Pane opacity="0.8" prefHeight="497.0" prefWidth="255.0" style="-fx-background-color: grey;" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox prefHeight="523.0" prefWidth="258.0">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <children>
+                        <Label alignment="CENTER" prefHeight="85.0" prefWidth="238.0" text="Our restaurant works with fresh and quality components" textAlignment="CENTER" textFill="#ff9797" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" prefHeight="80.0" prefWidth="238.0" text="Here are some of our popular components: " textAlignment="CENTER" textFill="#fff200" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="10.0" />
+                           </padding>
+                        </Label>
+                        <ListView fx:id="popularComp" prefHeight="269.0" prefWidth="238.0" style="-fx-font-size: 18;" />
+                     </children>
+                  </VBox>
+               </children>
+            </Pane>
+         </left>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <right>
+            <Pane opacity="0.8" prefHeight="519.0" prefWidth="255.0" style="-fx-background-color: grey;" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox prefHeight="519.0" prefWidth="254.0">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <children>
+                        <Label alignment="CENTER" prefHeight="56.0" prefWidth="253.0" text="Meet the team of our excellent chefs !!" textAlignment="CENTER" textFill="#ff9797" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" prefHeight="105.0" prefWidth="250.0" text="Choose your favorite expertise and you will see who the recommended chef is" textAlignment="CENTER" textFill="YELLOW" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="10.0" />
+                           </padding>
+                        </Label>
+                        <ChoiceBox fx:id="expertise" prefHeight="43.0" prefWidth="234.0" />
+                        <Label />
+                        <ListView fx:id="listOfChefs" prefHeight="205.0" prefWidth="234.0" style="-fx-font-size: 18;">
+                           <VBox.margin>
+                              <Insets bottom="5.0" />
+                           </VBox.margin>
+                        </ListView>
+                        <Button mnemonicParsing="false" onAction="#seeChefs" prefHeight="22.0" prefWidth="235.0" style="-fx-background-color: green; -fx-background-radius: 30;" text="OK" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+            </Pane>
+         </right>
+         <center>
+            <Pane opacity="0.8" prefHeight="523.0" prefWidth="414.0" style="-fx-background-color: #ff9797;" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox layoutX="-2.0" layoutY="-2.0" prefHeight="528.0" prefWidth="363.0">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <children>
+                        <Label alignment="CENTER" prefHeight="73.0" prefWidth="434.0" text="Sensitive to lactose / gluten ?" textFill="YELLOW">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" prefHeight="80.0" prefWidth="434.0" text="Get customized recommended dishes">
+                           <font>
+                              <Font name="System Bold" size="17.0" />
+                           </font>
+                        </Label>
+                        <ListView fx:id="releventDishList" prefHeight="274.0" prefWidth="343.0" style="-fx-font-size: 17;">
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </ListView>
+                     </children>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <BorderPane.margin>
+                  <Insets left="4.0" right="4.0" />
+               </BorderPane.margin>
+            </Pane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

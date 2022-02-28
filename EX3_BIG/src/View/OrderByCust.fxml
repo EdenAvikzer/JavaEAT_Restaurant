@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainScreen" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.OrderByCustController">
+   <children>
+      <ImageView fitHeight="600.0" fitWidth="900.0" layoutX="5.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/food3.jpg" />
+         </image>
+      </ImageView>
+      <VBox layoutX="8.0" layoutY="-3.0" prefHeight="80.0" prefWidth="893.0">
+         <children>
+            <Label fx:id="customer" prefHeight="21.0" prefWidth="348.0" textFill="WHITE">
+               <font>
+                  <Font name="System Italic" size="15.0" />
+               </font>
+               <padding>
+                  <Insets right="20.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets left="10.0" top="10.0" />
+               </VBox.margin>
+            </Label>
+            <Label alignment="CENTER" prefHeight="44.0" prefWidth="898.0" text="My Orders" textFill="WHITE">
+               <font>
+                  <Font name="Lucida Sans Demibold Italic" size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <AnchorPane layoutX="107.0" layoutY="100.0" opacity="0.85" prefHeight="377.0" prefWidth="686.0" style="-fx-background-color: #c2bfbf;">
+         <children>
+            <HBox alignment="CENTER" prefHeight="377.0" prefWidth="686.0" style="-fx-background-color: #c2bfbf;">
+               <children>
+                  <ScrollPane prefHeight="387.0" prefWidth="686.0" style="-fx-background-color: #c2bfbf;" styleClass="transparent" stylesheets="@../controller/controller.css">
+                     <content>
+                        <GridPane fx:id="grid" prefHeight="0.0" prefWidth="2.0" style="-fx-background-color: #c2bfbf;">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                        </GridPane>
+                     </content>
+                  </ScrollPane>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <HBox layoutX="107.0" layoutY="485.0" opacity="0.65" prefHeight="44.0" prefWidth="686.0" style="-fx-background-color: white;">
+         <children>
+            <Label prefHeight="25.0" prefWidth="167.0" text="Total Orders: " textFill="GREEN">
+               <font>
+                  <Font name="Lucida Sans Demibold Italic" size="16.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </Label>
+            <Label fx:id="numberOfOrders" prefHeight="25.0" prefWidth="257.0">
+               <font>
+                  <Font name="Lucida Sans Italic" size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <Button layoutX="26.0" layoutY="529.0" mnemonicParsing="false" onAction="#goBack" opacity="0.56" prefHeight="30.0" prefWidth="73.0" style="-fx-background-color: white; -fx-background-radius: 30;" text="Back" textFill="RED">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

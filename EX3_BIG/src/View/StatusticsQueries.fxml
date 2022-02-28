@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainScreen" prefHeight="465.0" prefWidth="591.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.StatusticsQueriesController">
+   <children>
+      <Label layoutX="222.0" layoutY="23.0" text="Statistical data" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="120.0" layoutY="82.0" prefHeight="121.0" prefWidth="347.0" style="-fx-border-color: white;">
+         <children>
+            <Label alignment="CENTER" layoutX="6.0" layoutY="5.0" prefHeight="17.0" prefWidth="329.0" text="Number Of Deliveries Per Type" textFill="#ececa5">
+               <font>
+                  <Font name="System Italic" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="68.0" layoutY="38.0" prefHeight="21.0" prefWidth="118.0" text="Express Delivery:" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font></Label>
+            <Label layoutX="67.0" layoutY="73.0" prefHeight="21.0" prefWidth="130.0" text="Regular Delivery:" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font></Label>
+            <Label fx:id="express" layoutX="213.0" layoutY="38.0" prefHeight="21.0" prefWidth="91.0" textFill="#ff932f">
+               <font>
+                  <Font size="15.0" />
+               </font></Label>
+            <Label fx:id="regular" layoutX="213.0" layoutY="75.0" prefHeight="21.0" prefWidth="91.0" textFill="#ff932f">
+               <font>
+                  <Font size="15.0" />
+               </font></Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="122.0" layoutY="208.0" prefHeight="218.0" prefWidth="347.0" style="-fx-border-color: white;">
+         <children>
+            <Label layoutX="92.0" layoutY="3.0" text="Popular Components List" textFill="#ececa5">
+               <font>
+                  <Font name="System Italic" size="15.0" />
+               </font>
+            </Label>
+            <ListView fx:id="popularList" layoutX="9.0" layoutY="32.0" prefHeight="181.0" prefWidth="329.0" />
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="52.0" fitWidth="43.0" layoutX="377.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/statistics.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

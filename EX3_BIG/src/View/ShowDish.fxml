@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainScreen" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ShowDishController">
+   <children>
+      <ImageView fitHeight="600.0" fitWidth="900.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/managerBack.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane opacity="0.6" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: black;">
+         <children>
+            <ListView fx:id="dishesList" layoutX="6.0" layoutY="141.0" prefHeight="319.0" prefWidth="249.0" style="-fx-font-size: 17;" />
+            <Label layoutX="95.0" layoutY="110.0" text="All Dishes" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <Button layoutX="766.0" layoutY="14.0" mnemonicParsing="false" onAction="#goBack" style="-fx-background-color: #c4c4b6; -fx-background-radius: 30;" text="Back To Menu" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="102.0" layoutY="466.0" mnemonicParsing="false" onAction="#removeDish" prefHeight="38.0" prefWidth="57.0" style="-fx-background-color: black;" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="9.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="55.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/removeRed.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <AnchorPane fx:id="replace" layoutX="261.0" layoutY="140.0" prefHeight="319.0" prefWidth="321.0" style="-fx-border-color: #c4c4b6;">
+               <children>
+                  <VBox layoutX="1.0" prefHeight="315.0" prefWidth="314.0">
+                     <children>
+                        <Label prefHeight="42.0" prefWidth="261.0" text="Details :" textFill="WHITE">
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" top="10.0" />
+                           </padding>
+                           <font>
+                              <Font name="System Bold Italic" size="15.0" />
+                           </font>
+                        </Label>
+                        <HBox prefHeight="24.0" prefWidth="200.0">
+                           <children>
+                              <Label prefHeight="17.0" prefWidth="82.0" text="1. Name:" textFill="#858688">
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="name" prefHeight="31.0" prefWidth="228.0" textFill="WHITE">
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" />
+                                 </padding>
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="37.0" prefWidth="314.0">
+                           <children>
+                              <Label prefHeight="17.0" prefWidth="86.0" text="2. Price:" textFill="#878784">
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="price" prefHeight="24.0" prefWidth="219.0" textFill="WHITE">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font></Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="24.0" prefWidth="200.0">
+                           <children>
+                              <Label prefHeight="31.0" prefWidth="107.0" text="3. Dish Type:" textFill="#858688">
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" />
+                                 </padding>
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="dishType" prefHeight="21.0" prefWidth="206.0" textFill="WHITE">
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="22.0" prefWidth="198.0">
+                           <children>
+                              <Label prefHeight="21.0" prefWidth="161.0" text="4. Preparation time:" textFill="#858688">
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="time" prefHeight="31.0" prefWidth="149.0" style="-fx-background-radius: 30;">
+                                 <tooltip>
+                                    <Tooltip text="Enter numbers only" />
+                                 </tooltip>
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font></TextField>
+                           </children>
+                        </HBox>
+                        <Label text="5. Components:" textFill="#858688">
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" />
+                           </padding>
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <ListView fx:id="listOfComponents" prefHeight="109.0" prefWidth="314.0" />
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+            <Label fx:id="status" alignment="CENTER" layoutX="592.0" layoutY="110.0" prefHeight="21.0" prefWidth="295.0" textFill="#33e822">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <AnchorPane fx:id="addComponentAP" layoutX="590.0" layoutY="140.0" prefHeight="315.0" prefWidth="302.0" style="-fx-border-color: #c4c4b6;">
+               <children>
+                  <VBox layoutX="4.0" layoutY="1.0" prefHeight="315.0" prefWidth="295.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="38.0" prefWidth="293.0" text="Add New Dish" textFill="WHITE">
+                           <padding>
+                              <Insets bottom="5.0" top="5.0" />
+                           </padding>
+                           <font>
+                              <Font name="System Bold Italic" size="15.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="dishName" prefHeight="25.0" prefWidth="187.0" promptText="Dish Name: " style="-fx-background-radius: 30;">
+                           <tooltip>
+                              <Tooltip text="Enter letters only" />
+                           </tooltip>
+                           <font>
+                              <Font size="15.0" />
+                           </font></TextField>
+                        <Label text="--Choose Type--" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label>
+                           <font>
+                              <Font size="2.0" />
+                           </font>
+                        </Label>
+                        <ChoiceBox fx:id="newType" prefHeight="39.0" prefWidth="297.0" />
+                        <Label>
+                           <font>
+                              <Font size="2.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="timeToMake" promptText="Preparation time:" style="-fx-background-radius: 30;">
+                           <tooltip>
+                              <Tooltip text="Enter numbers only" />
+                           </tooltip>
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin></TextField>
+                        <Label prefHeight="25.0" prefWidth="189.0" text="Components:" textFill="WHITE">
+                           <padding>
+                              <Insets left="10.0" top="10.0" />
+                           </padding>
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <ListView fx:id="listOfComponents1" prefHeight="101.0" prefWidth="295.0" />
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+            <Button layoutX="712.0" layoutY="459.0" mnemonicParsing="false" onAction="#addDish" prefHeight="38.0" prefWidth="36.0" style="-fx-background-color: black;" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="9.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="47.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/addGreen.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="391.0" layoutY="465.0" mnemonicParsing="false" onAction="#edit" style="-fx-background-color: black;">
+               <graphic>
+                  <ImageView fitHeight="41.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/editOrange.jpg.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <TextField fx:id="searchById" layoutX="14.0" layoutY="70.0" prefHeight="31.0" prefWidth="181.0" promptText="Search By ID">
+               <font>
+                  <Font name="System Italic" size="15.0" />
+               </font>
+            </TextField>
+            <Button layoutX="195.0" layoutY="62.0" mnemonicParsing="false" onAction="#search" prefHeight="25.0" prefWidth="35.0" style="-fx-background-color: black;">
+               <graphic>
+                  <ImageView fitHeight="44.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/search.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Button>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="116.0" fitWidth="145.0" layoutX="382.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/LOGO.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainScreen" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FinalScreenController">
+   <children>
+      <ImageView fitHeight="600.0" fitWidth="900.0" layoutY="120.0" opacity="0.51" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/chef.jpg" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="14.0" layoutY="14.0" opacity="0.58" prefHeight="102.0" prefWidth="871.0" style="-fx-background-color: #ff8f18; -fx-background-radius: 30;" text="YOUR ORDER IS ON ITS WAY TO YOU" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="System Bold Italic" size="16.0" />
+         </font>
+      </Label>
+      <Button layoutX="329.0" layoutY="493.0" mnemonicParsing="false" onAction="#continueShopping" prefHeight="35.0" prefWidth="241.0" style="-fx-background-color: orange; -fx-background-radius: 30;" text="CONTINUE SHOPPING" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="16.0" />
+         </font>
+      </Button>
+      <ImageView fx:id="view" fitHeight="354.0" fitWidth="364.0" layoutX="19.0" layoutY="172.0" opacity="0.83" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/deliveryShipping.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="51.0" fitWidth="58.0" layoutX="615.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/submit.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

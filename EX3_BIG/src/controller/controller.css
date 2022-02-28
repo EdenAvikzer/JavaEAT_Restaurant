@@ -1,0 +1,129 @@
+.loginField {
+	-fx-border-color:  #f2ec9f;
+	-fx-border-width:0px 0px 2px 0px;
+	-fx-background-color:transparent;
+	-fx-text-fill: white;
+}
+
+
+.list-cell {
+    -fx-control-inner-background:   #969696 ;
+}
+
+.list-view {
+    -fx-selection-bar:  #f2ec9f ;
+    -fx-selection-bar-non-focused:  #f2ec9f ;
+}
+
+.transparent {
+	-fx-background-color: rgbe(0,0,0,0);
+}
+
+.loginButtons {
+	-fx-background-radius: 30;
+	-fx-background-color:    #f2ec9f;
+	-fx-border-radius: 30;
+}
+.loginButtons:hover {
+	-fx-background-color:transparent;
+	-fx-text-fill: white;
+	-fx-font-family: Bold;
+	-fx-border-color: white;
+}
+
+.createAccountButtons {
+	-fx-background-radius: 30;
+	-fx-background-color:    #c4c4b6;
+	-fx-border-radius: 30;
+}
+.createAccountButtons:hover {
+	-fx-background-color:transparent;
+	-fx-text-fill: white;
+	-fx-font-family: Bold;
+	-fx-border-color: white;
+}
+
+
+
+.managerButtons {
+	-fx-border-color:  #3ca5c2;
+	-fx-background-color:   #564130;
+}
+.managerButtons:hover {
+	-fx-background-color: grey;
+	-fx-text-fill: #564130;
+	-fx-font-size: 21;
+	-fx-font-family: Bold;
+}
+
+
+.logoutButtons {
+	-fx-background-color: #c4c4b6;
+}
+.logoutButtons:hover {
+	-fx-background-color: white;
+}
+
+.customerButtons {
+	-fx-background-color:  #969696;
+	-fx-border-radius: 2cm;
+	-fx-border-color: white;
+}
+.customerButtons:hover {
+	-fx-background-color: #f2ec9f;
+}
+.customerButtons:pressed {
+	-fx-background-color: white;
+}
+
+.jfx-tab-pane .control-buttons-tab{
+    -fx-background-color: RED;
+}
+.jfx-tab-pane .control-buttons-tab .tab-down-button{
+    -fx-background-color: GREEN;
+}
+
+.tab-header-background{
+-fx-background-color: GREEN;
+}
+
+.tab-label {
+-fx-text-fill: BLACK ;
+}
+
+
+.dishItem {
+	-fx-background-radius: 30;
+	-fx-border-radius: 30;
+	-fx-background-color:  #969292;
+}
+.dishItem:hover {
+	-fx-background-color: #fdd0d0;
+}
+.dishItem:pressed {
+	-fx-background-color: red;
+}
+
+/* unvisited link */
+.HLink:link {
+  -fx-text-fill: red;
+}
+
+/* visited link */
+.HLink:visited {
+  -fx-text-fill: white;
+}
+
+/* mouse over link */
+.HLink:hover {
+  -fx-text-fill: #3ca5c2;
+  -fx-font-size: 21;
+}
+/* selected link */
+.HLink:active {
+  -fx-text-fill: blue;
+}
+
+
+
+

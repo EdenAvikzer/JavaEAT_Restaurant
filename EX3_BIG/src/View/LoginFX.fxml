@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainScreen" minHeight="600.0" prefWidth="900.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
+   <children>
+      <Label fx:id="title" alignment="CENTER" contentDisplay="CENTER" layoutX="548.0" layoutY="133.0" prefHeight="27.0" prefWidth="195.0" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="txtPassword" layoutX="558.0" layoutY="251.0" prefHeight="30.0" prefWidth="195.0" promptText="Password" styleClass="loginField" stylesheets="@../controller/controller.css">
+         <font>
+            <Font size="14.0" />
+         </font></PasswordField>
+      <TextField fx:id="txtUserName" layoutX="558.0" layoutY="169.0" prefHeight="30.0" prefWidth="195.0" promptText="UserName" styleClass="loginField" stylesheets="@../controller/controller.css">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
+      <Label layoutX="473.0" layoutY="432.0" text="Don't have an account?" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font></Label>
+      <Button alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="646.0" layoutY="425.0" mnemonicParsing="false" onAction="#addNewCustomerView" prefHeight="32.0" prefWidth="162.0" styleClass="createAccountButtons" stylesheets="@../controller/controller.css" text="Create New Account" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font>
+      </Button>
+      <Button alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="552.0" layoutY="345.0" mnemonicParsing="false" onAction="#Login" prefHeight="32.0" prefWidth="206.0" styleClass="loginButtons" stylesheets="@../controller/controller.css" text="Login" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="16.0" />
+         </font>
+      </Button>
+      <ImageView fx:id="showPass" fitHeight="30.0" fitWidth="30.0" layoutX="759.0" layoutY="265.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/eye.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="showPassword" layoutX="558.0" layoutY="251.0" prefHeight="30.0" prefWidth="195.0" promptText="Password" styleClass="loginField" stylesheets="@../controller/controller.css">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
+      <ImageView fx:id="hide" fitHeight="30.0" fitWidth="30.0" layoutX="759.0" layoutY="260.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/hidenEye.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="view" fitHeight="114.0" fitWidth="195.0" layoutX="599.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/lock.png" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="-1.0" prefHeight="401.0" prefWidth="238.0">
+         <children>
+            <ImageView fitHeight="600.0" fitWidth="357.0" layoutX="-5.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/wine.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="32.0" fitWidth="36.0" layoutX="508.0" layoutY="169.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/userImg.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="32.0" fitWidth="30.0" layoutX="513.0" layoutY="251.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/lock.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
